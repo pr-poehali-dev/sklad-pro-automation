@@ -103,14 +103,24 @@ export default function Index() {
         </nav>
 
         <div className="p-4 border-t border-sidebar-border">
-          <div className="flex items-center gap-3 px-4 py-3">
-            <div className="w-9 h-9 bg-sidebar-accent rounded-full flex items-center justify-center">
-              <Icon name="User" size={18} className="text-sidebar-foreground" />
+          <div className="flex items-center justify-between gap-3 px-4 py-3">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-sidebar-accent rounded-full flex items-center justify-center">
+                <Icon name="User" size={18} className="text-sidebar-foreground" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-sidebar-foreground">Оператор склада</p>
+                <p className="text-xs text-sidebar-foreground/60">Смена #1</p>
+              </div>
             </div>
-            <div className="flex-1">
-              <p className="text-sm font-medium text-sidebar-foreground">Оператор склада</p>
-              <p className="text-xs text-sidebar-foreground/60">Смена #1</p>
-            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => (window.location.href = '/auth')}
+              className="text-sidebar-foreground/60 hover:text-sidebar-foreground"
+            >
+              <Icon name="LogOut" size={16} />
+            </Button>
           </div>
         </div>
       </aside>
